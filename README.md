@@ -128,6 +128,7 @@ Voraussetzung, dass die Images im 2D Unity Projekt angelegt sind (4 Elemente) un
 
 ## Fragen:
 Macht es einen Unterschied ein Array über den Inspector zu initialisieren oder im Script?
+Was passiert mit der Initialisierung von Arrays wenn fälschlicherweise das Scipt 2x attached wurde?
 
 
 ### Development platform: 
