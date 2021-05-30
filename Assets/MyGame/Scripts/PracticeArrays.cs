@@ -70,6 +70,29 @@ public class PracticeArrays : MonoBehaviour
         PrintArrayAsOneliner(array2);
         PrintArrayAsOneliner(array4);
 
+        //Array Zugriff einzelne Elemente:
+
+        //Greifen Sie auf das 4te Elemente in array1 zu und ändern sie den Wert auf 3. Geben Sie das Element mittels Debug.Log aus
+        array1[3] = 3;
+        Debug.Log(array1[3]);
+
+        //Greifen Sie auf das 3te Element in array2 zu und ändern sie den Wert auf 203. Geben Sie das Element mittels Debug.Log aus
+        array2[2] = 203;
+        Debug.Log(array2[2]);
+
+        //Greifen Sie auf das 6te Element in array3 zu und ändern sie die Farbe auf 333.
+        array3[5] = 333;
+        Debug.Log(array3[5]);
+
+        //Greifen Sie auf das 3te Element in array4 zu und ändern sie den Wert auf "heute". Geben Sie das Element mittels Debug.Log aus
+        array4[2] = "heute";
+        Debug.Log(array4[2]);
+
+        //Greifen Sie auf das 3te Element in arrayColoredImagesRed zu und ändern sie die Farbe auf grün. Die Änderung sollte in der Scene/Game View ersichtlich sein
+        arrayColoredImagesRed[2].GetComponent<Image>().color = Color.green;
+        Debug.Log(arrayColoredImagesRed[2].GetComponent<Image>().color.ToString());
+
+
 
     }
 
