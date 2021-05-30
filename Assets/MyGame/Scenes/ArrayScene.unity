@@ -548,6 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638199497}
+  - component: {fileID: 638199496}
   m_Layer: 0
   m_Name: PracticeArray
   m_TagString: Untagged
@@ -555,6 +556,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &638199496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638199495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ceb37e3c368d71448b9784e8279ae65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayColoredImagesRed:
+  - {fileID: 555951085}
+  - {fileID: 1140430844}
+  - {fileID: 1635166207}
+  - {fileID: 561214683}
+  - {fileID: 1966927880}
+  - {fileID: 2016824352}
+  - {fileID: 458639388}
 --- !u!4 &638199497
 Transform:
   m_ObjectHideFlags: 0
@@ -989,7 +1010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1983341966
 MonoBehaviour:
   m_ObjectHideFlags: 0
