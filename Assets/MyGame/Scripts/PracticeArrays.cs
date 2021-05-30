@@ -34,6 +34,23 @@ public class PracticeArrays : MonoBehaviour
         {
             Debug.Log(i.name);
         }
+
+        //Direkter Zugriff auf einzelne Elemente in den Arrays array1-array4 und arrayColoredImageRed
+        Debug.Log("array1[0]= " + array1[0]);
+        Debug.Log("array2[0]= " + array2[0]);
+        Debug.Log("array3[0]= " + array3[0]);
+        Debug.Log("array4[0]= " + array4[0]);
+
+        Debug.Log("array1[" + (array1.Length - 1) + "]= " + array1[array1.Length - 1]);
+        Debug.Log("array2[" + (array2.Length - 1) + "]= " + array2[array2.Length - 1]);
+        Debug.Log("array3[" + (array3.Length - 1) + "]= " + array3[array3.Length - 1]);
+        Debug.Log("array4[" + (array4.Length - 1) + "]= " + array4[array4.Length - 1]);
+
+        // 1) auf erstes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
+        Debug.Log(arrayColoredImagesRed[0].name);
+
+        // 2) auf letzes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
+        Debug.Log(arrayColoredImagesRed[arrayColoredImagesRed.Length-1].name);
     }
 
 }
