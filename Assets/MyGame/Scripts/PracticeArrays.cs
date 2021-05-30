@@ -51,6 +51,82 @@ public class PracticeArrays : MonoBehaviour
 
         // 2) auf letzes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
         Debug.Log(arrayColoredImagesRed[arrayColoredImagesRed.Length-1].name);
+
+        //Zugriff auf einen Array mittels For-Schleife. Eine For-Schleife führt eine Operation mehrmals aus.
+
+        //Hier wird immer wieder der Wert der Elemente als string im Array in einem Debug.Log ausgegeben.
+
+        //1) Eine Methode schreiben die die Werte mit zugehörigen index als Debug.Log ausgibt.
+
+        // Element[0] = Wert an 0
+
+        // Element[1] = Wert an 1
+
+        PrintArrayWithIndex(array1);
+        PrintArrayWithIndex(array4);
+        PrintArrayWithIndex(arrayColoredImagesRed);
+
+        //2) Eine Methode schreiben die die Werte des Arrays als einen langen string ausgibt, z.b. 1 2 3 4 statt
+        PrintArrayAsOneliner(array2);
+        PrintArrayAsOneliner(array4);
+
+
+    }
+
+    void PrintArrayAsOneliner(int[] array)
+    {
+        string tmp = "";
+        for(int i = 0; i < array.Length;  i++)
+        {
+            tmp = tmp + array[i].ToString();
+
+            if (i != array.Length - 1)
+            {
+                tmp = tmp + ", ";
+            }
+        }
+
+        Debug.Log(tmp);
+    }
+
+    void PrintArrayAsOneliner(string[] array)
+    {
+        string tmp = "";
+        for(int i = 0; i < array.Length; i++)
+        {
+            tmp = tmp + array[i];
+
+            if (i != array.Length - 1)
+            {
+                tmp = tmp + ", ";
+            }
+        }
+
+        Debug.Log(tmp);
+    }
+
+    void PrintArrayWithIndex(int[] array)
+    {
+        for(int i=0;i<array.Length;i++)
+        {
+            Debug.Log("Element[" + i + "] = "+ array[i]);
+        }
+    }
+
+    void PrintArrayWithIndex(string[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Debug.Log("Element[" + i + "] = " + array[i]);
+        }
+    }
+
+    void PrintArrayWithIndex(GameObject[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Debug.Log("Element[" + i + "] = " + array[i].name);
+        }
     }
 
 }
