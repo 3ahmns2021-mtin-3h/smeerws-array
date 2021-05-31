@@ -92,9 +92,92 @@ public class PracticeArrays : MonoBehaviour
         arrayColoredImagesRed[2].GetComponent<Image>().color = Color.green;
         Debug.Log(arrayColoredImagesRed[2].GetComponent<Image>().color.ToString());
 
+        //Erstelle ein weiteres Array mit Namen array5, dass mit allen geraden Zahlen zwischen 20 und 70 gefüllt ist.
+        
+        int[] array5 = new int[GetFrequencyNumbers(20,70,"even")];
+ 
+        int numbers5 = 0;
+        for (int i = 20; i <= 70; i++)
+        {
+            if (i % 2 == 0)
+            {
+                array5[numbers5] = i;
+                numbers5++;
+            }
+        }
 
+        PrintArrayWithIndex(array5);
 
+        //Gefordert ist ein Array mit Namen array6, dass alle geraden Zahlen zwischen 0 und 500 enthält.
+        int[] array6 = new int[GetFrequencyNumbers(0, 500, "even")];
+
+        int numbers6 = 0;
+        for (int i = 0; i <= 500; i++)
+        {
+            if (i % 2 == 0)
+            {
+                array6[numbers6] = i;
+                numbers6++;
+            }
+        }
+
+        PrintArrayWithIndex(array6);
+
+        //Gefordert ist ein Array mit Namen array7, dass alle ungeraden Zahlen zwischen 0 und 500 enthält.
+        int[] array7 = new int[GetFrequencyNumbers(0, 500, "odd")];
+
+        int numbers7 = 0;
+        for (int i = 0; i <= 500; i++)
+        {
+            if (i % 2 != 0)
+            {
+                array7[numbers7] = i;
+                numbers7++;
+            }
+        }
+
+        PrintArrayWithIndex(array7);
+
+        //Gefordert ist ein Array mit Namen array8, dass 100 Elemente hält und als Elemente folgende Buchstabenreihe hat: "a", "b", "a", "b","a", "b","a", "b", ...
+        string[] array8 = new string[100];
+        for (int i = 0; i < 100; i++)
+        {
+            if(i%2 == 0)
+            {
+                array8[i] = "a";
+            }
+            else
+            {
+                array8[i] = "b";
+            }
+        }
+
+        PrintArrayAsOneliner(array8);
     }
+
+    int GetFrequencyNumbers(int min, int max, string evenOdd)
+    {
+        int freq = 0;
+
+        for (int i = min; i <= max; i++)
+        {
+            if (evenOdd == "even")
+            {
+                if(i % 2 == 0)
+                {
+                    freq++;
+                }
+            }else if(evenOdd == "odd" )
+            {
+                if(i % 2 != 0)
+                {
+                    freq++;
+                }
+            }
+        }
+        return freq;
+    }
+
 
     void PrintArrayAsOneliner(int[] array)
     {
