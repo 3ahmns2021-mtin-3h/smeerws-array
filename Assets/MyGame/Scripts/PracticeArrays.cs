@@ -174,6 +174,24 @@ public class PracticeArrays : MonoBehaviour
         array5.CopyTo(array10, 0);
         array6.CopyTo(array10, array5.Length);
         PrintArrayAsOneliner(array10);
+
+        //Gefordert ist ein Array mit Namen array11, mit 1000 Elementen. Die Elemente werden mit Randomzahlen gefüllt, ermittle das Minimum und Maximum der enthaltenen Werte.
+        int[] array11 = new int[1000];
+        for (int i = 0; i < array11.Length; i++)
+        {
+            array11[i] = Random.Range(0, 1000);
+        }
+
+        System.Array.Sort(array11);
+        Debug.Log("min array11 = " + array11[0]);
+        Debug.Log("max array11 = " + array11[array11.LongLength-1]);
+
+        //Gefordert ist ein Array mit Namen array12, mit 1000 Elementen. Die Elemente werden mit Randomzahlen gefüllt. Suche einen Wert und gib den Index retour, Hint: System.Array nachschauen!
+        int[] array12 = (int[])array11.Clone();
+        Debug.Log("Index of value: " + System.Array.IndexOf(array12, 22));
+
+        //optional: Histogram: Gefordert ist ein Array mit Namen array12. Die Elemente werden mit Randomzahlen gefüllt zwischen 1 und 5. Ermittle wie oft 1, 2, 3, 4, 5 vorkommt und speichere die Anzahl in einem Array namens histogram. Das Array histogram hat 5 Elemente.
+
     }
 
     int GetFrequencyNumbers(int min, int max, string evenOdd)
