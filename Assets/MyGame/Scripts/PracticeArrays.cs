@@ -153,6 +153,27 @@ public class PracticeArrays : MonoBehaviour
         }
 
         PrintArrayAsOneliner(array8);
+
+        //Gefordert ist ein Array mit Namen array9, mit 1000 Elementen. Die Elemente werden mit Randomzahlen gefüllt und ausgegeben über Debug.
+        int[] array9 = new int[1000];
+        for (int i = 0; i < array9.Length; i++)
+        {
+            array9[i] = Random.Range(0, 20);
+        }
+
+        PrintArrayWithIndex(array9);
+
+        //Das array9 einhält unsortierte int Werte. Sortiere das Array und gib mittels Debug.Log die Werte des sortierten array9 aus. HINT: Hier wird System.Array.Sort() verwendet!!
+
+        System.Array.Sort(array9);
+
+        PrintArrayAsOneliner(array9);
+
+        //Erweitern des Array durch zusammenkopieren von 2 Arrays. Kopiere array5 und arry6 in ein neues array10
+        int[] array10 = new int[array5.Length + array6.Length];
+        array5.CopyTo(array10, 0);
+        array6.CopyTo(array10, array5.Length);
+        PrintArrayAsOneliner(array10);
     }
 
     int GetFrequencyNumbers(int min, int max, string evenOdd)
