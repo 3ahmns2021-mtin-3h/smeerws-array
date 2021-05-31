@@ -190,7 +190,40 @@ public class PracticeArrays : MonoBehaviour
         int[] array12 = (int[])array11.Clone();
         Debug.Log("Index of value: " + System.Array.IndexOf(array12, 22));
 
-        //optional: Histogram: Gefordert ist ein Array mit Namen array12. Die Elemente werden mit Randomzahlen gefüllt zwischen 1 und 5. Ermittle wie oft 1, 2, 3, 4, 5 vorkommt und speichere die Anzahl in einem Array namens histogram. Das Array histogram hat 5 Elemente.
+        //optional: Histogram: Gefordert ist ein Array mit Namen array13. Die Elemente werden mit Randomzahlen gefüllt zwischen 1 und 5. Ermittle wie oft 1, 2, 3, 4, 5 vorkommt und speichere die Anzahl in einem Array namens histogram. Das Array histogram hat 5 Elemente.
+        int[] array13 = new int[30];
+        for(int i = 0; i < array13.Length; i++)
+        {
+            array13[i] = Random.Range(1,6);
+        }
+
+        int[] histogram = new int[5];
+        for(int i = 0; i < array13.Length; i++)
+        {
+            if(array13[i] == 1)
+            {
+                histogram[0] += 1;
+            }
+            else if (array13[i] == 2)
+            {
+                histogram[1] += 1;
+            }
+            else if (array13[i] == 3)
+            {
+                histogram[2] += 1;
+            }
+            else if (array13[i] == 4)
+            {
+                histogram[3] += 1;
+            }
+            else if (array13[i] == 5)
+            {
+                histogram[4] += 1;
+            }
+        }
+        System.Array.Sort(array13);
+        PrintArrayAsOneliner(array13);
+        PrintArrayAsOneliner(histogram);
 
     }
 
